@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - John Maina</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+    <style>
+        /* About Section */
+        .about {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            color: #f0f0f0;
+        }
+
+        /* Skill Section */
+        .skill {
+            margin-bottom: 2rem; /* Add spacing between skills */
+            padding: 1rem;
+            background-color: #444; /* Slightly lighter gray for contrast */
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        .skill h3 {
+            font-size: 1.5rem;
+            color: #fff; /* White text for headings */
+            margin-bottom: 0.5rem;
+        }
+
+        .skill p {
+            font-size: 1rem;
+            color: #ccc; /* Light gray text for paragraphs */
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li> <!-- Active Tab -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+        <section class="contact-form">
+            <h1>Contact Me</h1>
+            <form id="contactForm" action="/submit-comment" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="social-media">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                <img src="images/facebook.png" alt="Facebook">
+            </a>
+            <a href="mailto:simeonmunyondi608@gmail.com" target="_blank" aria-label="Twitter">
+                <img src="images/email.png" alt="Twitter">
+            </a>
+            <a href="https://linkedin.com/in/simeon-munyondi" target="_blank" aria-label="LinkedIn">
+                <img src="images/linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/smunyondi" target="_blank" aria-label="GitHub">
+                <img src="images/github.png" alt="GitHub">
+            </a>
+        </div>
+        <p>&copy; 2025 Simeon Munyondi. All rights reserved.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
