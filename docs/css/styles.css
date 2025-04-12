@@ -1,0 +1,1196 @@
+/* Ensure the entire page takes up the full height of the viewport */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
+    font-family: Arial, sans-serif;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #333; /* Match header and footer background */
+    color: #f0f0f0; /* Light text for readability */
+}
+
+/* General Text Styles */
+body {
+    color: #f0f0f0; /* Light text for readability */
+}
+
+/* General Styles for Larger Screens (Default) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: #333; /* Dark gray for a professional look */
+    color: #fff; /* White text for contrast */
+    padding: 1rem 0;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    background-color: transparent;
+    color: #fff; /* White text for navigation links */
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin: 0 0.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+header nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent white on hover */
+    color: #fff; /* Keep white text on hover */
+}
+
+/* Active Tab Styles */
+header nav ul li a.active {
+    background-color: #4CAF50; /* Muted green background for active tab */
+    color: #333; /* Dark gray text for active tab */
+    pointer-events: none; /* Disable clicking on the active tab */
+}
+
+/* Admin Button Styles */
+header nav ul li .admin-btn {
+    background-color: #dc3545; /* Red background */
+    color: #fff; /* White text */
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+
+header nav ul li .admin-btn:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+/* Admin Button Styles */
+header nav ul li a[href="/admin/comments"] {
+    background-color: #dc3545; /* Red background */
+    color: #fff; /* White text */
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+header nav ul li a[href="/admin/comments"]:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+/* Intro Section */
+.intro {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    text-align: center; /* Center-align text */
+    /* height: 100vh; Make the intro section take up the full viewport height */
+    margin: 0; /* Remove any margin that might affect centering */
+    padding: 2rem;
+    background-color: #2B2B2B; /* Optional: Add a background color for contrast */
+}
+
+.intro, .home-about, .home-portfolio, .home-contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 1rem;
+    background-color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Home Photos */
+.home-photos {
+    width: 100%; /* Make the image responsive */
+    max-width: 300px; /* Limit the maximum width of the image */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 8px; /* Add rounded corners */
+    object-fit: cover; /* Ensure the image scales properly */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+    margin-bottom: 1rem; /* Add spacing below the image */
+}
+
+.intro img {
+    width: 300px; /* Set a smaller width for the image */
+    height: 300px; /* Set a fixed height to make it a square */
+    border-radius: 50%; /* Make the image circular */
+    margin-right: 1.5rem; /* Add spacing between the image and text */
+    object-fit: cover; /* Ensure the image scales properly within the circular frame */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+    border: 5px solid #333; /* Add a white border to enhance the circular frame */
+}
+
+.intro img, .home-about img, .home-portfolio img {
+    width: 30%;
+    border-radius: 8px;
+    margin-right: 1.5rem;
+}
+
+/* Intro Section Text */
+.intro div {
+    flex: 1; /* Allow the text to take up remaining space */
+    text-align: left; /* Align text to the left */
+}
+
+.intro div, .home-about div, .home-portfolio div, .home-contact div {
+    flex: 1;
+    text-align: left;
+}
+
+.intro h1 {
+    font-size: 2rem; /* Large heading */
+    color: #fff; /* White text for heading */
+    margin-bottom: 1rem;
+}
+
+.intro p {
+    font-size: 1rem;
+    color: #ccc; /* Light gray text for paragraphs */
+    line-height: 1.6; /* Improve readability */
+}
+
+/* Intro Section Logo */
+.intro-logo {
+    width: 150px; /* Set a fixed width for the logo */
+    height: 150px; /* Set a fixed height to make it a square */
+    border-radius: 50%; /* Make the logo circular */
+    object-fit: cover; /* Ensure the logo scales properly within the circular frame */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+    border: 5px solid #fff; /* Add a white border to enhance the circular frame */
+    margin-bottom: 1rem; /* Add spacing below the logo */
+    align-items: "center"; /* Center the logo */
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333; /* Dark gray for a professional look */
+    color: #555; /* White text for contrast */
+    position: relative; /* Ensure it stays at the bottom */
+    bottom: 0;
+    width: 100%;
+}
+
+footer .social-media {
+    margin-top: 1rem;
+}
+
+footer .social-media a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+footer .social-media img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+footer .social-media img:hover {
+    transform: scale(1.2); /* Slight zoom effect on hover */
+}
+
+/* Contact Form Section */
+.contact-form {
+    max-width: 600px; /* Limit the width of the form */
+    margin: 2rem auto; /* Center the form on the page */
+    padding: 2rem;
+    background: #333; /* Slightly lighter gray for contrast */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    color: #f0f0f0; /* Light text for readability */
+}
+
+.contact-form h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #fff; /* White text for the heading */
+}
+
+.contact-form label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #ccc; /* Light gray text for labels */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%; /* Full width for inputs and textarea */
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #555; /* Subtle border */
+    border-radius: 5px;
+    background: #333; /* Match the dark gray background */
+    color: #f0f0f0; /* Light text for readability */
+    font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #4CAF50; /* Muted green border on focus */
+    box-shadow: 0 0 5px #4CAF50; /* Subtle green glow */
+}
+
+.contact-form button {
+    display: block;
+    width: 100%; /* Full width button */
+    padding: 0.75rem;
+    background: #4CAF50; /* Muted green background */
+    color: #333; /* Dark gray text for buttons */
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #3E8E41; /* Slightly darker green on hover */
+    color: #fff; /* White text on hover */
+}
+
+/* Pop-up message styles */
+.popup-message {
+    position: fixed; /* Ensure the pop-up is positioned relative to the viewport */
+    top: 20px; /* Position the pop-up 20px from the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for horizontal centering */
+    z-index: 9999; /* Ensure the pop-up appears above all other elements */
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeInOut 5s forwards;
+    text-align: center;
+}
+
+.popup-message.success {
+    background-color: #28a745; /* Green for success */
+}
+
+.popup-message.error {
+    background-color: #dc3545; /* Red for error */
+}
+
+/* Fade-in and fade-out animation */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-10px); /* Slightly above the top center */
+    }
+    10% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0); /* Fully visible */
+    }
+    90% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0); /* Stay visible */
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-10px); /* Fade out */
+    }
+}
+
+/* Main content area should expand to fill available space */
+main {
+    flex: 1; /* Allow the main content to grow and fill the space */
+}
+
+/* Portfolio Section */
+.portfolio {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column; /* Stack projects vertically */
+    gap: 2rem; /* Add spacing between projects */
+}
+
+/* Individual Project Section */
+.project {
+    display: flex; /* Use Flexbox for layout */
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Space between image and text */
+    margin-bottom: 2rem; /* Add spacing between projects */
+    padding: 1rem;
+    background-color: #333; /* Slightly lighter gray for contrast */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Project Image */
+.project img {
+    width: 40%; /* Set image width */
+    border-radius: 8px;
+    margin-right: 1.5rem; /* Add spacing between image and text */
+}
+/* Project Image */
+.project img {
+    width: 40%; /* Set image width */
+    border-radius: 8px;
+    margin-right: 1.5rem; /* Add spacing between image and text */
+}
+
+/* Project Description */
+.project-description {
+    flex: 1; /* Allow the text to take up remaining space */
+    text-align: left; /* Align text to the left */
+}
+
+.project-description h2 {
+    font-size: 1.5rem;
+    color: #fff; /* White text for headings */
+    margin-bottom: 0.5rem;
+}
+
+.project-description p {
+    font-size: 1rem;
+    color: #ccc; /* Light gray text for paragraphs */
+    margin-bottom: 1rem;
+}
+
+.project-description a {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #4CAF50; /* Muted green background */
+    color: #333; /* Dark gray text for buttons */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.project-description a:hover {
+    background-color: #3E8E41; /* Slightly darker green on hover */
+    color: #fff; /* White text on hover */
+}
+
+/* Smart Home Automation Project */
+.smart-home {
+    display: flex; /* Use Flexbox for layout */
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Space between image and text */
+    margin-bottom: 2rem; /* Add spacing below the project */
+    padding: 1rem;
+    background-color: #333; /* Slightly lighter gray for contrast */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Image on the Left */
+.smart-home img {
+    width: 40%; /* Set image width */
+    border-radius: 8px;
+    margin-right: 1.5rem; /* Add spacing between image and text */
+}
+
+/* Text on the Right */
+.smart-home .project-description {
+    flex: 1; /* Allow the text to take up remaining space */
+    text-align: left; /* Align text to the left */
+}
+
+.smart-home .project-description h2 {
+    font-size: 1.5rem;
+    color: #fff; /* White text for headings */
+    margin-bottom: 0.5rem;
+}
+
+.smart-home .project-description p {
+    font-size: 1rem;
+    color: #ccc; /* Light gray text for paragraphs */
+    margin-bottom: 1rem;
+}
+
+.smart-home .project-description a {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #4CAF50; /* Muted green background */
+    color: #333; /* Dark gray text for buttons */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.smart-home .project-description a:hover {
+    background-color: #3E8E41; /* Slightly darker green on hover */
+    color: #fff; /* White text on hover */
+}
+
+/* About Section */
+.about {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column; /* Stack sections vertically */
+    gap: 2rem; /* Add spacing between sections */
+    color: #fff !important; /* Force white text for all content */
+}
+
+/* About Section Headings */
+.about h2 {
+    font-size: 2rem;
+    color: #fff !important; /* Force white text for headings */
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* About Section Paragraphs */
+.about p {
+    font-size: 1rem;
+    color: #ccc !important; /* Force white text for paragraphs */
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+/* Individual About Section */
+.about-me, .skill {
+    display: flex; /* Use Flexbox for layout */
+    flex-direction: column; /* Stack content vertically */
+    padding: 1rem;
+    background-color: #333; /* Slightly lighter gray for contrast */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* About Section Description */
+.about-description {
+    text-align: left; /* Align text to the left */
+}
+
+/* Individual About Section */
+.about-me, .skill {
+    display: flex; /* Use Flexbox for layout */
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Space between image and text */
+    margin-bottom: 2rem; /* Add spacing between sections */
+    padding: 1rem;
+    background-color: #333; /* Slightly lighter gray for contrast */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* About Section Image */
+.about-image {
+    width: 40%; /* Set image width */
+    border-radius: 8px;
+    margin-right: 1.5rem; /* Add spacing between image and text */
+}
+
+/* About Section Description */
+.about-description {
+    flex: 1; /* Allow the text to take up remaining space */
+    text-align: left; /* Align text to the left */
+}
+
+.about-description h2 {
+    font-size: 1.5rem;
+    color: #fff; /* White text for headings */
+    margin-bottom: 0.5rem;
+}
+
+.about-description p {
+    font-size: 1rem;
+    color: #ccc; /* Light gray text for paragraphs */
+    margin-bottom: 1rem;
+}
+
+.about h1, .about h2 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+.about p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.about ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px;
+    text-align: left;
+}
+
+.about ul li {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.about ul li::before {
+    content: "✔"; /* Add a checkmark before each skill */
+    color: #28a745; /* Green color for the checkmark */
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+/* Ensure Skills Stack Vertically */
+.about .skills-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem; /* Add spacing between skills */
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+}
+
+/* Individual Skill */
+.skill {
+    display: block; /* Ensure each skill takes up the full width */
+    margin-bottom: 2rem; /* Add spacing between skills */
+    padding: 1rem;
+    background-color: #333; /* Slightly lighter gray for contrast */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.skill h3 {
+    font-size: 1.5rem;
+    color: #fff; /* White text for headings */
+    margin-bottom: 0.5rem;
+}
+
+.skill p {
+    font-size: 1rem;
+    color: #ccc; /* Light gray text for paragraphs */
+    margin-bottom: 0;
+}
+
+/* Skills Section Styles */
+.skills-section {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center align the content */
+    margin-top: 2rem;
+}
+
+.skills-section img {
+    width: 100%; /* Full width for images */
+    max-width: 600px; /* Limit the maximum width */
+    border-radius: 8px;
+    margin-bottom: 1rem; /* Add spacing below the image */
+}
+
+.skills-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center; /* Center align the list */
+}
+
+.skills-section ul li {
+    font-size: 1rem;
+    color: #ccc; /* Light gray text for list items */
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.skills-section ul li::before {
+    content: "✔"; /* Add a checkmark before each skill */
+    color: #4CAF50; /* Muted green for the checkmark */
+    position: absolute;
+    left: -20px; /* Adjust position */
+    font-size: 1.2rem;
+}
+
+/* Skill Section */
+.skill {
+    display: block; /* Ensure each skill takes up the full width */
+    margin-bottom: 2rem; /* Add spacing between skills */
+    padding: 1rem;
+    background-color: #333; /* Slightly lighter gray for contrast */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Ensure Skills Stack Vertically */
+.about .skills-list {
+    display: flex;
+    flex-direction: column; /* Stack skills vertically */
+    gap: 1.5rem; /* Add spacing between skills */
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+}
+
+.skill h3 {
+    font-size: 1.5rem;
+    color: #fff; /* White text for headings */
+    margin-bottom: 0.5rem;
+}
+
+.skill p {
+    font-size: 1rem;
+    color: #ccc; /* Light gray text for paragraphs */
+    margin-bottom: 0;
+}
+
+/* General Section Styles */
+main section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 2rem auto;
+    padding: 1rem;
+    max-width: 1200px;
+    background-color: #333; /* Slightly lighter gray for sections */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    color: #f0f0f0; /* Light text for readability */
+}
+
+main section img {
+    width: 40%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+main section div {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: flex-start; /* Align content to the top */
+    text-align: left;
+    margin-left: 1.5rem;
+}
+
+main section h2 {
+    font-size: 2rem;
+    color: #fff; /* White text for headings */
+    margin-bottom: 1rem;
+}
+
+main section p {
+    font-size: 1rem;
+    color: #ccc; /* Light gray text for paragraphs */
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.read-more-btn {
+    margin-top: auto;
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: #4CAF50; /* Muted green background */
+    color: #333; /* Dark gray text for buttons */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.read-more-btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background-color: #3E8E41; /* Slightly darker muted green on hover */
+    color: #333; /* Keep dark gray text on hover */
+}
+
+.read-more-btn:hover {
+    background-color: #3E8E41;
+}
+
+/* Adjust Comment Section Styles */
+.home-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the content */
+    margin: 2rem auto;
+    padding: 1rem;
+    max-width: 800px; /* Adjust the width */
+    background-color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center the text */
+}
+
+.home-contact div {
+    flex: 1;
+}
+
+.home-contact h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.home-contact p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.read-more-btn {
+    margin-top: auto;
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: #4CAF50; /* Muted green background */
+    color: #333; /* Dark gray text for buttons */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.read-more-btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background-color: #3E8E41; /* Slightly darker muted green on hover */
+    color: #333; /* Keep dark gray text on hover */
+}
+
+.read-more-btn:hover {
+    background-color: #3E8E41;
+}
+
+/* Read More Button */
+.show-more-btn {
+    display: inline-block;
+    padding: 0.5rem 1rem; /* Adjust padding to make the button smaller */
+    background-color: #4CAF50; /* Muted green background */
+    color: #fff; /* White text for buttons */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9rem; /* Slightly smaller font size */
+    transition: background-color 0.3s ease;
+    width: auto; /* Ensure the button width adjusts to the text */
+    text-align: center;
+}
+
+.show-more-btn:hover {
+    background-color: #3E8E41; /* Slightly darker green on hover */
+    color: #fff; /* White text on hover */
+}
+
+/* Media Queries for Responsiveness */
+
+/* For Tablets (Screen Width 768px and Below) */
+@media (max-width: 768px) {
+    .intro, .home-about, .home-portfolio, .home-contact {
+        flex-direction: column; /* Stack content vertically */
+        text-align: center;
+    }
+
+    .intro img, .home-about img, .home-portfolio img {
+        width: 80%; /* Make images smaller */
+        margin: 0 auto 1rem; /* Center images */
+    }
+
+    .intro div, .home-about div, .home-portfolio div, .home-contact div {
+        text-align: center; /* Center text */
+    }
+
+    .intro img {
+        width: 120px; /* Reduce size for tablets */
+        height: 120px;
+        border: 4px solid #333; /* Adjust border size for smaller screens */
+    }
+
+    .menu-toggle {
+        display: block; /* Show the menu button on smaller screens */
+    }
+
+    .nav-links {
+        display: none; /* Hide the links by default */
+        flex-direction: column; /* Stack links vertically */
+        gap: 0;
+        background-color: #333;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    .nav-links ul {
+        flex-direction: column; /* Stack list items vertically */
+        align-items: center;
+    }
+
+    .nav-links ul li {
+        margin-bottom: 0.5rem;
+    }
+
+    .nav-links.show {
+        display: flex; /* Show the links when the menu is toggled */
+    }
+}
+
+/* For Mobile Devices (Screen Width 480px and Below) */
+@media (max-width: 480px) {
+    header nav ul {
+        flex-direction: column; /* Stack navigation links vertically */
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin-bottom: 0.5rem;
+    }
+
+    .intro img, .home-about img, .home-portfolio img {
+        width: 100%; /* Full width for images */
+    }
+
+    .read-more-btn {
+        padding: 0.5rem; /* Adjust button padding */
+        font-size: 0.9rem; /* Reduce font size */
+    }
+
+    .intro img {
+        width: 100px; /* Reduce size further for mobile devices */
+        height: 100px;
+        margin: 0 auto 1rem; /* Center the image and add spacing below */
+        border: 3px solid #333; /* Adjust border size for mobile screens */
+    }
+}
+
+/* Intro Section Text */
+.intro-text h1 {
+    font-size: 2rem;
+    color: #fff; /* White text for the heading */
+    margin-bottom: 1rem;
+}
+
+.intro-text p {
+    font-size: 1rem;
+    color: #ccc; /* Light gray text for the paragraph */
+    line-height: 1.6; /* Improve readability */
+    max-width: 600px; /* Limit the width of the text for better readability */
+}
+
+/* Media Queries for Larger Screens */
+@media (min-width: 1200px) {
+    .intro {
+        height: 100vh; /* Ensure the intro section takes up the full viewport height */
+        padding: 3rem; /* Add extra padding for larger screens */
+    }
+
+    .intro-logo {
+        width: 200px; /* Increase the logo size for larger screens */
+        height: 200px;
+    }
+
+    .intro-text h1 {
+        font-size: 2.5rem; /* Increase heading size for larger screens */
+    }
+
+    .intro-text p {
+        font-size: 1.2rem; /* Increase paragraph size for better readability */
+    }
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    background-color: #444;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Remove any styles related to the menu button */
+.menu-toggle {
+    display: none;
+}
+
+.nav-links {
+    display: flex; /* Ensure links are always visible */
+    gap: 1rem;
+}
+
+/* Default hidden state for nav-links */
+.nav-links {
+    display: none; /* Hide the menu by default */
+    flex-direction: column; /* Stack links vertically */
+    background-color: #333;
+    position: absolute;
+    top: 100%; /* Position the dropdown below the nav bar */
+    left: 0;
+    width: 100%; /* Full width for the dropdown */
+    padding: 1rem 0;
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+/* Show the menu when the "show" class is added */
+.nav-links.show {
+    display: flex; /* Make the menu visible */
+}
+
+/* Menu button for smaller screens */
+.menu-toggle {
+    display: none; /* Hide the button by default */
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show the menu button on smaller screens */
+    }
+
+    .nav-links ul {
+        flex-direction: column; /* Stack list items vertically */
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links ul li {
+        margin-bottom: 0.5rem;
+    }
+
+    .nav-links ul li a {
+        text-decoration: none;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        background-color: #444;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .nav-links ul li a:hover {
+        background-color: #555;
+    }
+}
+
+/* General styles for project sections */
+.project {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 0;
+    gap: 1rem;
+}
+
+.project img {
+    width: 40%; /* Image takes 40% of the width */
+    border-radius: 10px;
+}
+
+.project-description {
+    width: 55%; /* Text takes 55% of the width */
+    text-align: justify;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .project {
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: center;
+    }
+
+    .project img {
+        width: 100%; /* Image takes full width */
+        margin-bottom: 1rem; /* Add spacing below the image */
+    }
+
+    .project-description {
+        width: 100%; /* Text takes full width */
+    }
+}
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    width: 100%;
+    position: absolute;
+    top: 60px; /* Adjust based on header height */
+    left: 0;
+    padding: 1rem 0;
+    z-index: 999;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links ul li {
+    margin: 0.5rem 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    width: 100%;
+    position: absolute;
+    top: 60px; /* Adjust based on header height */
+    left: 0;
+    padding: 1rem 0;
+    z-index: 999;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links ul li {
+    margin: 0.5rem 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - John Maina</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="contact-form">
+            <h1>Contact Me</h1>
+            <form id="contactForm" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit" id="submitButton">Send</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="social-media">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                <img src="images/facebook.png" alt="Facebook">
+            </a>
+            <a href="mailto:simeonmunyondi608@gmail.com" target="_blank" aria-label="Twitter">
+                <img src="images/email.png" alt="Twitter">
+            </a>
+            <a href="https://linkedin.com/in/simeon-munyondi" target="_blank" aria-label="LinkedIn">
+                <img src="images/linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/smunyondi" target="_blank" aria-label="GitHub">
+                <img src="images/github.png" alt="GitHub">
+            </a>
+        </div>
+        <p>&copy; 2025 Simeon Munyondi. All rights reserved.</p>
+    </footer>
+    <div id="popup" class="popup hidden">
+        <span id="popup-message"></span>
+        <button id="popup-close">Close</button>
+    </div>
+    <script>
+        const form = document.getElementById('contactForm');
+        const submitButton = document.getElementById('submitButton');
+
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault(); // Prevent the default form submission
+            console.log('Form submission triggered'); // Debugging log
+
+            if (submitButton.disabled) return; // Prevent further submissions if already disabled
+
+            submitButton.disabled = true; // Disable the button to prevent multiple clicks
+
+            const formData = new URLSearchParams(new FormData(form));
+
+            try {
+                const response = await fetch('/submit-comment', { // Use the correct endpoint
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: formData.toString(),
+                });
+
+                if (response.ok) {
+                    alert('Comment sent successfully!'); // Keep this pop-up
+                    form.reset(); // Reset the form fields
+                } else {
+                    const errorMessage = await response.text();
+                    console.error(`Failed to send comment: ${errorMessage}`);
+                    alert(`Failed to send comment: ${errorMessage}`); // Show styled pop-up
+                }
+            } catch (error) {
+                console.error('Error submitting the form:', error);
+                alert('An error occurred while sending your comment. Please try again.'); // Show styled pop-up
+            } finally {
+                submitButton.disabled = false; // Re-enable the button
+            }
+        });
+    </script>
+</body>
+</html>

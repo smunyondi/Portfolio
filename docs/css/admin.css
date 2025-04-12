@@ -1,0 +1,174 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+/* Table Styles */
+.comments-table {
+    width: 90%;
+    margin: 2rem auto;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.comments-table th,
+.comments-table td {
+    padding: 1rem;
+    text-align: left;
+    border: 1px solid #333;
+}
+
+.comments-table th {
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+}
+
+.comments-table tr:nth-child(even) {
+    background-color: #333;
+    color: white;
+}
+.comments-table tr:nth-child(odd) {
+    background-color: #444;
+    color: white;
+}
+
+.comments-table tr:hover {
+    background-color: #666;
+}
+
+/* Button Styles */
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* Home Button Styles */
+.home-btn {
+    position: absolute; /* Position the button relative to the viewport */
+    top: 10px; /* 10px from the top */
+    left: 10px; /* 10px from the left */
+    padding: 0.5rem 1rem;
+    background-color: #007BFF; /* Blue background */
+    color: #fff; /* White text */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.home-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+header .home-btn {
+    background-color: #28a745; /* Green background */
+    color: #fff; /* White text */
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    position: absolute; /* Position the button */
+    top: 10px; /* 10px from the top */
+    left: 10px; /* 10px from the left */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+header .home-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Pop-up message styles */
+.popup-message {
+    position: fixed;
+    top: 20px; /* Position the pop-up 20px from the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for horizontal centering */
+    z-index: 1000;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeInOut 5s forwards;
+    text-align: center;
+}
+
+.popup-message.success {
+    background-color: #28a745; /* Green for success */
+}
+
+.popup-message.error {
+    background-color: #dc3545; /* Red for error */
+}
+
+/* Fade-in and fade-out animation */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-10px); /* Slightly above the top center */
+    }
+    10% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0); /* Fully visible */
+    }
+    90% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0); /* Stay visible */
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-10px); /* Fade out */
+    }
+}
+
+/* Logout Button Styles */
+.logout-btn {
+    position: absolute; /* Position the button relative to the viewport */
+    top: 10px; /* 10px from the top */
+    right: 10px; /* 10px from the right */
+    padding: 0.5rem 1rem;
+    background-color: #dc3545; /* Red background */
+    color: #fff; /* White text */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.logout-btn:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
